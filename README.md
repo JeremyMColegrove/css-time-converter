@@ -1,31 +1,55 @@
-# Getting Started with Your Node TypeScript NPM Package
+# 🌟 css-time-converter
 
-Follow these steps to customize and set up your package:
+Convert CSS time values like '2s' or '500ms' into a standard millisecond number with ease.
 
-1. **Update Package Name**  
-   - Modify _your-package-name_ in _package.json_ and other relevant files to reflect your package's name.
+### Key Features:
+- **Simple Conversion**: Effortlessly convert CSS time strings to milliseconds.
+- **Lightweight**: Minimal code, maximum efficiency.
+- **Versatile**: Supports both 's' (seconds) and 'ms' (milliseconds) formats.
 
-2. **Update Command Line Interface (CLI) Command**  
-   - Update the _bin/*_ files to define the CLI command you want to use.
-   - Reflect these changes in the _package.json_ under the _bin_ section.
+## 🚀 Installation
+To install css-time-converter, run the following command:
 
-3. **Setup Git Repository**  
-   - Initialize your Git repository.
-   - Add GitHub Actions as _coverall-github-action-workflow_ (copy and paste is fine, but feel free to modify if needed).
+```bash
+npm install css-time-converter
+```
 
-4. **Fill in the README**  
-   - Provide detailed information about your package in the README file.
+## 🛠 Getting Started
+To get started, simply import the `convert` function into your JavaScript or TypeScript project:
 
-5. **Add Your Code**  
-   - Add your package files to the _src/*_ directory.
+```javascript
+import convert from 'css-time-converter';
+```
 
-6. **Use .js Extensions**  
-   - Ensure that all imports use _.js_ extensions, since this package outputs both ESM and CJS formats.
+Then, use it to convert any CSS time string to milliseconds:
 
-7. **Modify .gitignore**  
-   - The _.gitignore_ file is already set up, but feel free to add any other files you want to ignore.
+```javascript
+const durationInMs = convert('2s'); // 2000
+```
 
-8. **Configure TypeScript**  
-   - Modify the TypeScript configuration in _config/*_ to suit your needs.
-   - _esModuleInterop_ is turned off in _tsconfig_ because this is a package. If you turn it on, any other package using this will need to have it enabled too.
-# css-time-converter
+## 📸 Example
+Here’s a quick example of how to use css-time-converter in your code:
+
+```javascript
+import convert from 'css-time-converter';
+
+const animationDuration = '3.5s';
+const durationInMs = convert(animationDuration);
+
+console.log(`The duration in milliseconds is: ${durationInMs}`);
+// Output: The duration in milliseconds is: 3500
+```
+
+## 🌟 Why Choose css-time-converter?
+- **Accurate**: Ensures consistent conversion of CSS time values.
+- **Easy to Use**: Just one function to handle all your time conversion needs.
+- **Compact**: Only a few lines of code, perfect for any project size.
+
+## 🌍 Supported Environments
+css-time-converter is compatible with all modern browsers and Node.js environments.
+
+## 🎨 Customization
+The `convert` function is designed to be straightforward and doesn’t require customization. It works out of the box to convert any valid CSS time string.
+
+## 🔧 Acknowledgments & Contributions
+Feel free to fork, open issues, or submit pull requests to help improve this project.

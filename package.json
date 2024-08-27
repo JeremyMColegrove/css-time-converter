@@ -1,16 +1,11 @@
 {
-  "name": "package-name",
-  "version": "2.5.3",
-  "description": "Your description here",
+  "name": "css-time-converter",
+  "version": "1.0.3",
+  "description": "Converts CSS time to milliseconds",
   "type": "module",
-  "exports": {
-    ".": {
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js",
-      "types": "./dist/types/index.d.ts"
-    }
-  },
-  "bin": "./bin/command-line-name.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:types && npm run build:package",
     "build:package": "echo {\\\"type\\\": \\\"commonjs\\\"} > dist/cjs/package.json && echo {\\\"type\\\": \\\"module\\\"} > dist/esm/package.json",
@@ -30,15 +25,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "your-repo-here"
+    "url": "https://github.com/JeremyMColegrove/css-time-converter"
   },
   "license": "MIT",
-  "keywords": [],
+  "keywords": ["css", "time", "converter", "milliseconds"],
   "author": "Jeremy Colegrove",
   "bugs": {
-    "url": "https://github.com/JeremyMColegrove/git-name-here/issues"
+    "url": "https://github.com/JeremyMColegrove/css-time-converter/issues"
   },
-  "homepage": "https://github.com/JeremyMColegrove/git-name-here#readme",
+  "homepage": "https://github.com/JeremyMColegrove/css-time-converter#readme",
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "@types/node": "^22.2.0",
@@ -48,8 +43,5 @@
     "ts-jest": "^29.2.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
-  },
-  "dependencies": {
-    "commander": "^12.1.0"
   }
 }
